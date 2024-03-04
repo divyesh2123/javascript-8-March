@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="education"></div>
+    <div class="education"></div>
+    <div class="education"></div>
+    <div class="education"></div>
+    <div class="education"></div>
+    <div class="education"></div>
+
+    <script>
+
+let pnode= document.querySelectorAll(".education");
+    let pcollection = document.getElementsByClassName("education");
+
+    let element= document.createElement("div");
+
+    element.className = "education";
+
+    document.body.appendChild(element)
+
+    
+    console.log(pnode.length);
+    console.log(pcollection.length);
+
+    </script>
+
+    
+</body>
+</html>

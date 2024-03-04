@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="parent">
+        FullStack<input type="checkbox" onclick="handleInput(this)"/>
+
+        <div class="front-end">
+
+          Front-End  <input type="checkbox"  onclick="handleInput(this)"/>
+          <div class="childs">
+          
+          Html <input type="checkbox" onclick="handleInput(this)"/>
+           CSS <input type="checkbox" onclick="handleInput(this)"/>
+           Javascript <input type="checkbox" onclick="handleInput(this)"/>
+           React <input type="checkbox" onclick="handleInput(this)"/>
+        
+        </div>
+        </div>
+
+        <div class="back-end">
+            Back-End  <input type="checkbox"  onclick="handleInput(this)"/>
+            <div>
+                <div class="childs">
+
+            Node <input type="checkbox" onclick="handleInput(this)"/>
+            MongoDB <input type="checkbox" onclick="handleInput(this)"/>
+            C# <input type="checkbox" onclick="handleInput(this)"/>
+            Java <input type="checkbox" onclick="handleInput(this)"/>
+       
+                    </div>
+        </div>
+        </div>
+
+
+    </div>
+
+    <script>
+
+        const handleInput = (e)=>{
+
+            const input = e.parentElement.querySelectorAll("input");
+
+          
+            if(e.parentElement.classList.contains("childs")== false)
+            {
+           
+            input.forEach(element => {
+                element.checked=  true;
+            });
+
+        }
+
+        }
+
+    </script>
+</body>
+</html>
