@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a"> </div>
+    <div id="b"> </div>
+    <script>
+
+     
+function getUsers(mydata) {
+    let users = [];
+
+// delay 1 second (1000ms)
+setTimeout(() => {
+    mydata( users = [
+    { username: 'john', email: 'john@test.com' },
+    { username: 'jane', email: 'jane@test.com' },
+  ]);
+}, 1000);
+
+return users;
+}
+
+
+  function findUser(username,dis) {
+  const users = getUsers((users) => {
+    const user = users.find((user) => user.username === username);
+    dis(user);
+  });
+  
+}
+
+let p =findUser("john",console.log);
+console.log(p);
+
+       //code of something 
+
+    </script>
+</body>
+</html>

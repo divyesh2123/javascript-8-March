@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let obj = {firstName : "Test"};
+        let obj2= {address: "test"};
+        let obj1 = {...obj,...obj2};
+
+        let a = [2,3,4];
+        let b = [34,12,22];
+
+        let c = [...a,...b];
+
+        console.log(c);
+
+        obj1.firstName = "Abc";
+
+        console.log(obj1);
+        console.log(obj);
+
+       
+
+
+    </script>
+</body>
+</html>

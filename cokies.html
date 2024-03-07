@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://js.sentry-cdn.com/e37ab1a248c268b6cee3699156be4c03.min.js"
+  crossorigin="anonymous"
+></script>
+</head>
+<body>
+
+    <input type="text" id="display"/>
+
+    <button onclick="checkNumber()">Check</button>
+    
+   
+    <script>
+
+
+Sentry.onLoad(function() {
+          Sentry.init({
+            // Performance Monitoring
+            tracesSampleRate: 1.0, // Capture 100% of the transactions
+            // Session Replay
+            replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
+            replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
+          });
+        });
+        
+        function checkNumber()
+        {
+            try
+            {
+
+                let a=2+y;
+      
+               
+
+            }
+            catch(error)
+            {//error code
+                console.log(error);
+              //  window.location.href = "error.html";
+            }
+            finally
+            {
+                //clean up like div value reset
+            }
+
+        }
+
+      
+       
+
+       
+
+    </script>
+</body>
+</html>

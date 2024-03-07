@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <video  controls src="https://www.w3schools.com/jsref/mov_bbb.mp4" type="video/mp4"   onpause="handleChange(event)" id="video">
+
+     
+    </video>
+
+    <button onclick="videoPlay()">Play</button>
+    <button onclick="videoPause()">Pause</button>
+
+    <script>
+
+        function handleChange(event)
+        {
+           
+           localStorage.setItem("timestamp",event.target.currentTime)
+
+        }
+        function settime()
+        {
+           
+           
+           
+          document.getElementById("video").currentTime = parseFloat(33);
+        }
+
+       // settime();
+
+        function videoPause()
+        {
+            document.getElementById("video").play();
+        }
+
+        window.addEventListener('load', settime);
+
+    </script>
+</body>
+</html>
