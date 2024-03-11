@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        async function test()
+        {
+            return 1;
+        }
+
+        async function apicall()
+        {
+            let p = await fetch("https://jsonplaceholder.typicode.com/users");
+            let o = await p.json();
+
+            let p1 = await fetch("https://fakestoreapi.com/users");
+            let o1 = await p1.json();
+
+            console.log([...o,...o1]);
+
+
+
+        }
+
+        apicall();
+
+        test().then(y=>{
+            console.log(y)
+        }).then(y=>{
+            console.log(y);
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        let p = new Promise((resolv,reject)=>{
+
+            let py = [];
+
+            fetch("https://jsonplaceholder.typicode.com/users")
+            .then(y=>y.json())
+            .then(y=>{
+               
+                py=y;
+                fetch("https://fakestoreapi.com/users")
+            .then(y=>y.json())
+            .then(y=>{
+              
+              
+                resolv([...y,...py]);
+            });
+
+
+           
+
+
+            })
+
+
+          
+
+        });
+
+        p.then(y=>{
+            console.log(y);
+        })
+
+
+    </script>
+</body>
+</html>
