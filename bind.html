@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const person1= {
+
+            firstName : "test",
+            lastName : "test1"
+        }
+
+        const person = {
+
+            fullName : function()
+            {
+                return this.firstName +" " + this.lastName
+            }
+
+        }
+
+      let p =  person.fullName.apply(person1);
+
+      console.log(p);
+
+    </script>
+</body>
+</html>

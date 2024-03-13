@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+let p1 ={
+    d: "Ddd"
+}
+      
+        let obj= {
+
+            firstName : "ddd",
+            lastName : "p",
+            get fullName()
+            {
+                return this.firstName + " "+ this.lastName
+            }
+        }
+
+      
+
+        Object.defineProperty(obj,"firstName",{
+           
+            writable:false,
+            enumerable:false
+        })
+
+        console.log(obj.firstName);
+
+      let p=  Object.getOwnPropertyNames(obj);
+
+       
+
+        console.log(p);
+
+
+    </script>
+</body>
+</html>
