@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <video id="p" controls src="mov_bbb.mp4" onpause="mypause(event)">
+
+
+    </video>
+
+    <script>
+      
+      setvideaoDAta();
+
+        function setvideaoDAta()
+        {
+            let t =  localStorage.getItem("mytime");
+
+            document.querySelector("#p").currentTime = t; 
+        }
+
+        function mypause(event)
+        {
+            console.log(event);
+            localStorage.setItem("mytime",event.target.currentTime);
+        }
+
+    </script>
+    
+</body>
+</html>
